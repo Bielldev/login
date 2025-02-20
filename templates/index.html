@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Html,css e python</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='static/css/style.css') }}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -13,9 +13,9 @@
         <nav id="menu">
             <ul>
                 <span class="peq">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
                 </span>
-                <li><a href="pag-sec.html">Pag sec</a></li>
+                <li><a href="{{ url_for('pag_sec') }}">Pag sec</a></li>
                 <li><a href="#">Contato</a></li>
                 <span class="peq">
                     <li><a href="#">Sobre</a></li>
@@ -24,14 +24,14 @@
         </nav>
     </header>
     <main>
-        <form action="../python/cod.py">
+        <form action="{{ url_for('login') }}" method="POST">
             <h1>Login</h1>
                 <div class="caixa1">
                 <input type="text" name="usuario_login" id="iuser" placeholder="Username">
                 <i class='bx bxs-user'></i>
                 </div>
             
-                <div class="caixa2"><input type="password" name="senha-login" id="ipass" placeholder="Password">
+                <div class="caixa2"><input type="password" name="senha" id="ipass" placeholder="Password">
                 <i class='bx bxs-lock-alt'></i>
                 </div>
 
