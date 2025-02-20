@@ -12,7 +12,7 @@
 
 body, html {
     height: 100vh;
-    background: url(imagens/background1920.jpg) no-repeat top center fixed;
+    background: url(../imagens/background1920.jpg) no-repeat top center fixed;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
 }
