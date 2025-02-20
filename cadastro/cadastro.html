@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <header>
+        <nav id="menu">
+            <ul>
+                <span class="peq">
+                    <li><a href="../index.html">Home</a></li>
+                </span>
+                <li><a href="../pag-sec.html">Pag sec</a></li>
+                <li><a href="#">Contato</a></li>
+                <span class="peq">
+                    <li><a href="#">Sobre</a></li>
+                </span>
+            </ul>
+        </nav>
+    </header>
+
+    <form action="cod.py">
+
+        <h1>Cadastro de Usuário</h1>
+        <input type="text" name="nome" id="inome" autocomplete="name" placeholder="Nome" required>
+
+        <input type="password" name="pass" id="ipass" placeholder="Senha" required>
+        <input type="password" name="pass" id="ipass" placeholder="Confirme a senha" required>
+
+
+        <!-- Botão de enviar -->
+        <input type="submit" value="Cadastrar" name="cadastro" id="icadastro"></input>
+
+        <a class="login" href="../index.html">Login</a>
+    </form>
+</body>
+</html>
