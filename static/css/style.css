@@ -21,7 +21,7 @@ body, html {
 form {
     text-align: right;
     position: relative;
-    top: 35vh;
+    top: 42vh;
     left: 50%;
     transform: translate(-50%, -50%);
     
@@ -32,10 +32,10 @@ form {
 }
 
 input {
-    position: relative;
+    position: absolute;
     border-radius: 40px;
     padding: 13px 50px 13px 20px;
-    margin: 10px 15px 10px 15px;
+    margin-top: 10px;
     width: 80%;
     height: 30px;
     background: transparent;
@@ -51,12 +51,53 @@ form > h1 {
     font-size: 5vh;
 }
 
-
-
-
-
-input#ipass {
+i{
+    position: absolute;
+    font-size: 20px;
+    padding: 10px;
     color: white;
+    margin: 20px 0px 0px 426px;
+}
+
+label  {
+    position: relative;
+    color: rgb(255, 255, 255);
+    margin: 165px 0px 0px 71px;
+    font-size: 14px;
+    display: block;
+    width: 110px;
+}
+
+
+p.register {
+    position: absolute;
+    margin: 190px 0px 0px 15px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    display: block;
+    width: 271px;
+    text-align: left;
+}
+
+a.register {
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+
+    width: 75px;
+}
+
+div.caixa1 {
+    position: relative;
+    left: -486px;
+    margin: 0px auto 80px auto;
+    
+}
+div.caixa2 {
+    margin-bottom: 80px;
+    position: relative;
+    left: -486px;
 }
 
 input#ilogin  {
@@ -66,20 +107,13 @@ input#ilogin  {
     padding: 30px;
     cursor: pointer;
     line-height: 5px;
-    color: white;
+
 }
 
 input#ilogin:hover {
     background: rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(255, 255, 255, .2);
     color: rgb(255, 255, 255);
-}
-
-input#icadastro {
-    padding: 25px;
-    margin: 50px 50px 50px 50px;
-    line-height: 5px;
-    cursor: pointer;
 }
 
 nav#menu {
@@ -123,19 +157,4 @@ nav#menu li {
 
 nav#menu ul span.peq a {
     width: 50px;
-}
-
-a.login {
-    position: relative;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    display: block;
-    margin: 0px 0px 0px 210px;
-    width: 50px;
-}
-
-a.login:hover {
-    color: black;
-    background-color: rgb(189, 189, 189);
 }
