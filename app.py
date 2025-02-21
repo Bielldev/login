@@ -100,6 +100,7 @@ def logout():
 @app.route('/registrar', methods=['GET', 'POST'])
 def registrar():
     if request.method == 'POST':
+        # Processar os dados do formulário
         login = request.form.get('usuario_login')
         senha = request.form.get('senha_login')
         confirmar_senha = request.form.get('confirmar_senha')
