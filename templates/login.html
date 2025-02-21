@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Html,css e python</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -13,9 +13,9 @@
         <nav id="menu">
             <ul>
                 <span class="peq">
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('login') }}">login</a></li>
                 </span>
-                <li><a href="{{ url_for('pag_sec') }}">Pag sec</a></li>
+                <li><a href="{{ url_for('sucesso') }}">sucesso</a></li>
                 <li><a href="#">Contato</a></li>
                 <span class="peq">
                     <li><a href="#">Sobre</a></li>
@@ -31,7 +31,7 @@
                 <i class='bx bxs-user'></i>
                 </div>
             
-                <div class="caixa2"><input type="password" name="senha" id="ipass" placeholder="Password">
+                <div class="caixa2"><input type="password" name="senha_login" id="ipass" placeholder="Password">
                 <i class='bx bxs-lock-alt'></i>
                 </div>
 
@@ -39,7 +39,7 @@
 
             <input type="submit" value="Enviar" name="login" id="ilogin"></input>
 
-            <p class="register">Don't have an account? <a href="cadastro/cadastro.html" class="register">Register</a></p>
+            <p class="register">Don't have an account? <a href="{{ url_for('registrar') }}" class="register">Register</a></p>
         </form>
     </main>
 </body>
