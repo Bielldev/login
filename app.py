@@ -35,8 +35,14 @@ def verificar_login(cursor, login, senha):
 
         if resultado:
             senha_hash_armazenado = resultado[0]
+            print(f"Hash armazenado: {senha_hash_armazenado}")  # Log para depuração
             if check_password_hash(senha_hash_armazenado, senha):
+                print("Senha correta!")  # Log para depuração
                 return True
+            else:
+                print("Senha incorreta!")  # Log para depuração
+        else:
+            print("Usuário não encontrado!")  # Log para depuração
         return False
     except mysql.connector.Error as erro:
         print(f"Erro na consulta: {erro}")
@@ -58,7 +64,9 @@ def registrar_usuario(cursor, login, senha):
 # Rota principal (login)
 @app.route('/', methods=['GET', 'POST'])
 def login():
+    print("Acessando a rota /login")  # Log para depuração
     if request.method == 'POST':
+        print("Processando formulário de login")  # Log para depuração
         login = request.form.get('usuario_login')
         senha = request.form.get('senha_login')
 
@@ -69,7 +77,7 @@ def login():
             if conexao:
                 cursor = conexao.cursor()
                 if verificar_login(cursor, login, senha):
-                    session['login'] = login  # Armazena o login na sessão
+                    session['login'] = login
                     flash('Login realizado com sucesso!', 'success')
                     return redirect(url_for('sucesso'))
                 else:
