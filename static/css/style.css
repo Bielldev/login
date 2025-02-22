@@ -35,7 +35,7 @@ input {
     position: absolute;
     border-radius: 40px;
     padding: 13px 50px 13px 20px;
-    margin-top: 10px;
+    margin-top: -36px;
     width: 80%;
     height: 30px;
     background: transparent;
@@ -44,7 +44,7 @@ input {
 }
 
 form > h1 {
-    color: rgb(255, 255, 255);
+    color: deepskyblue;
     text-align: center;
     top: 0%;
     font-family: 'Poppins', sans-serif;
@@ -56,7 +56,7 @@ i{
     font-size: 20px;
     padding: 10px;
     color: white;
-    margin: 20px 0px 0px 426px;
+    margin: -25px 0px 0px 426px;
 }
 
 label  {
@@ -71,7 +71,7 @@ label  {
 
 p.register {
     position: absolute;
-    margin: 190px 0px 0px 15px;
+    margin: 140px 0px 0px 15px;
     color: rgb(255, 255, 255);
     font-size: 15px;
     display: block;
@@ -84,15 +84,19 @@ a.register {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 16px;
-
     width: 75px;
+    
+}
+
+a.register:hover {
+    text-decoration: underline;
 }
 
 div.caixa1 {
     position: relative;
-    left: -486px;
-    margin: 0px auto 80px auto;
-    
+    left: -488px;
+    margin: 0px auto 104px auto;
+    top: -100px;
 }
 div.caixa2 {
     margin-bottom: 80px;
@@ -102,7 +106,7 @@ div.caixa2 {
 
 input#ilogin  {
     position: absolute;
-    margin: 100px 0px 0px 45px;
+    margin: 50px 0px 0px 45px;
     display: block;
     padding: 30px;
     cursor: pointer;
@@ -157,4 +161,18 @@ nav#menu li {
 
 nav#menu ul span.peq a {
     width: 50px;
+}
+
+div#erro {
+    position: relative;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
 }
