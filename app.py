@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 app.secret_key = 'gabriel2008'  # Chave secreta para sessões e CSRF
-csrf = CSRFProtect(app)  # Proteção CSRF
+csrf = CSRFProtect(app)  # Proteção CSRFfrom flask import Flask, render_template, request, redirect, url_for, session, flash
 
 # Configurações do banco de dados MySQL
 MYSQL_HOST = "localhost"
@@ -97,10 +97,17 @@ def logout():
     return redirect(url_for('login'))
 
 # Rota de registro de usuários
+def usuario_existe(cursor, login):
+    try:
+        cursor.execute("SELECT usuario_login FROM login WHERE usuario_login = %s", (login,))
+        return cursor.fetchone() is not None
+    except mysql.connector.Error as erro:
+        print(f"Erro na consulta: {erro}")
+        return False
+
 @app.route('/registrar', methods=['GET', 'POST'])
 def registrar():
     if request.method == 'POST':
-        # Processar os dados do formulário
         login = request.form.get('usuario_login')
         senha = request.form.get('senha_login')
         confirmar_senha = request.form.get('confirmar_senha')
@@ -113,7 +120,9 @@ def registrar():
             conexao = conectar_banco_de_dados()
             if conexao:
                 cursor = conexao.cursor()
-                if registrar_usuario(cursor, login, senha):
+                if usuario_existe(cursor, login):
+                    flash('Usuário já existe.', 'error')
+                elif registrar_usuario(cursor, login, senha):
                     conexao.commit()
                     flash('Usuário registrado com sucesso! Faça login.', 'success')
                     return redirect(url_for('login'))
