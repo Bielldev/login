@@ -2,16 +2,21 @@ from flask import Flask, render_template, request, redirect, url_for, session, f
 from flask_wtf.csrf import CSRFProtect
 import mysql.connector
 from werkzeug.security import generate_password_hash, check_password_hash
+from dotenv import load_dotenv  # Importe a função load_dotenv
+import os  # Importe o módulo os para acessar as variáveis de ambiente
+
+# Carregar variáveis de ambiente do arquivo .env
+load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = 'gabriel2008'  # Chave secreta para sessões e CSRF
-csrf = CSRFProtect(app)  # Proteção CSRFfrom flask import Flask, render_template, request, redirect, url_for, session, flash
+app.secret_key = os.getenv('SECRET_KEY')  # Chave secreta para sessões e CSRF
+csrf = CSRFProtect(app)  # Proteção CSRF
 
 # Configurações do banco de dados MySQL
-MYSQL_HOST = "localhost"
-MYSQL_USER = "root"
-MYSQL_PASSWORD = "gabriel2008"
-MYSQL_DATABASE = "banco_dados"
+MYSQL_HOST = os.getenv('MYSQL_HOST')
+MYSQL_USER = os.getenv('MYSQL_USER')
+MYSQL_PASSWORD = os.getenv('MYSQL_PASSWORD')
+MYSQL_DATABASE = os.getenv('MYSQL_DATABASE')
 
 # Função para conectar ao banco de dados
 def conectar_banco_de_dados():
