@@ -9,19 +9,8 @@ import os  # Importe o módulo os para acessar as variáveis de ambiente
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = os.getenv('SECRET_KEY')  # Chave secreta para sessões e CSRF
-csrf = CSRFProtect(app)  # Proteção CSRF
-
-# Verifique se a chave secreta foi carregada corretamente
-if not app.secret_key:
-    raise RuntimeError("A chave secreta (SECRET_KEY) não foi configurada no arquivo .env.")
-
-
-
-print(f"SECRET_KEY: {os.getenv('SECRET_KEY')}")
-print(f"MYSQL_HOST: {os.getenv('MYSQL_HOST')}")
-
-# Resto do código...
+app.secret_key = 'gabriel2008'  # Chave secreta para sessões e CSRF
+csrf = CSRFProtect(app)  # Proteção CSRFfrom flask import Flask, render_template, request, redirect, url_for, session, flash
 
 # Configurações do banco de dados MySQL
 MYSQL_HOST = os.getenv('MYSQL_HOST')
