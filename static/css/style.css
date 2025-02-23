@@ -17,27 +17,63 @@ body, html {
     font-family: 'Poppins', sans-serif;
 }
 
+@media screen and (max-width: 560px) {
+    form {
+        margin: 0px;
+        padding: 0px;
+        width: 80vw;
+        height: 80vh;
+        top: 37vh;
+    }
+}
+
+@media screen and (min-width: 560px) {
+    form {
+        margin: 0px;
+        padding: 0px;
+        width: 500px;
+        height: 70vh;
+        top: 35vh;
+    }
+}
+
 
 form {
     text-align: right;
     position: relative;
-    top: 42vh;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-    width: 500px;
-    height: 500px;
     border: 2px solid rgba(255, 255, 255, 0);
     backdrop-filter: blur(30px);
 }
 
+@media screen and (max-width: 560px) {
+    input {
+        position: relative;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -120px;
+        display: block;
+        height: 30px; 
+    }
+}
+
+@media screen and (min-width: 560px) {
+    input {
+        position: relative;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -120px;
+        display: block;
+        height: 30px;
+    }
+}
+
 input {
-    position: absolute;
     border-radius: 40px;
     padding: 13px 50px 13px 20px;
-    margin-top: -36px;
-    width: 80%;
-    height: 30px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     color: rgb(255, 255, 255);
@@ -70,13 +106,13 @@ label  {
 
 
 p.register {
-    position: absolute;
-    margin: 140px 0px 0px 15px;
+    position: relative;
+    margin: 20px 0px 0px -8px;
     color: rgb(255, 255, 255);
     font-size: 15px;
     display: block;
     width: 271px;
-    text-align: left;
+    text-align: center;
 }
 
 a.register {
@@ -92,27 +128,26 @@ a.register:hover {
     text-decoration: underline;
 }
 
-div.caixa1 {
-    position: relative;
-    left: -488px;
-    margin: 0px auto 104px auto;
-    top: -100px;
+@media screen and (min-width: 560px) {
+    input#ilogin {
+        margin: 20px auto 0px auto;
+    }
 }
-div.caixa2 {
-    margin-bottom: 80px;
-    position: relative;
-    left: -486px;
+@media screen and (max-width: 560px) {
+    input#ilogin {
+        margin: 50px auto 0px auto;
+    }
 }
 
 input#ilogin  {
-    position: absolute;
-    margin: 50px 0px 0px 45px;
+    position: relative;
     display: block;
     padding: 30px;
     cursor: pointer;
     line-height: 5px;
 
 }
+
 
 input#ilogin:hover {
     background: rgba(255, 255, 255, 0.2);
