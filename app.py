@@ -12,6 +12,17 @@ app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY')  # Chave secreta para sessões e CSRF
 csrf = CSRFProtect(app)  # Proteção CSRF
 
+# Verifique se a chave secreta foi carregada corretamente
+if not app.secret_key:
+    raise RuntimeError("A chave secreta (SECRET_KEY) não foi configurada no arquivo .env.")
+
+
+
+print(f"SECRET_KEY: {os.getenv('SECRET_KEY')}")
+print(f"MYSQL_HOST: {os.getenv('MYSQL_HOST')}")
+
+# Resto do código...
+
 # Configurações do banco de dados MySQL
 MYSQL_HOST = os.getenv('MYSQL_HOST')
 MYSQL_USER = os.getenv('MYSQL_USER')
