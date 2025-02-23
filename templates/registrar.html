@@ -29,18 +29,17 @@
     {% endif %}
 {% endwith %}
 
-
         <h1>Cadastro de Usuário</h1>
         <input type="text" name="usuario_login" id="inome" autocomplete="name" placeholder="Nome" required>
         <input type="password" name="senha_login" id="ipass" placeholder="Senha" required>
         <input type="password" name="confirmar_senha" id="ipass" placeholder="Confirme a senha" required>
-        
+
         <!-- Token CSRF -->
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-        
+
         <a class="login" href="{{ url_for('login') }}">Login</a>
-        
-        <input type="submit" value="Cadastrar" name="cadastro" id="icadastro">
+
+        <input type="submit" value="Cadastrar" name="cadastro" id="icadastro"></input>
     </form>
 </body>
-</html>
+</html> 
