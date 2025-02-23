@@ -38,23 +38,9 @@
         <!-- Token CSRF -->
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
         
-        <!-- Botão de enviar -->
-<<<<<<< HEAD
-        <input type="submit" value="Cadastrar" name="cadastro" id="icadastro">
+        <a class="login" href="{{ url_for('login') }}">Login</a>
         
-        <a class="login" href="{{ url_for('login') }}">Login</a>
-=======
-<<<<<<< HEAD
         <input type="submit" value="Cadastrar" name="cadastro" id="icadastro">
-        
-        <a class="login" href="{{ url_for('login') }}">Login</a>
-=======
-        <input type="submit" value="Cadastrar" name="cadastro" id="icadastro"></input>
-
-        <a class="login" href="{{ url_for('login') }}">Login</a>
-        <a class="login" href="../login.html">Login</a>
->>>>>>> fe251c4346b7b38efbefb2e3e0c37d5dcc8353f5
->>>>>>> 0ce0306fb4a13b3b376714fb6f183bc7f26aab46
     </form>
 </body>
 </html>
