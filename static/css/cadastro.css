@@ -59,19 +59,13 @@ input {
     border-radius: 40px;
     padding: 13px 50px 13px 20px;
     margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 15px;
     display: block;
+    width: 80%;
+    height: 30px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     color: rgb(255, 255, 255);
-}
-
-@media screen and (max-width: 560px) {
-    input#icadastro {
-        width: 80%;
-    }
-    
 }
 
 input#icadastro {
@@ -92,7 +86,7 @@ form > h1 {
     text-align: center;
     top: 0%;
     font-family: 'Poppins', sans-serif;
-    font-size: 3vh;
+    font-size: 4vh;
     color: deepskyblue
 }
 
@@ -169,7 +163,6 @@ a.login {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
     position: relative;
     width: 45px;
     text-decoration: none;

@@ -74,6 +74,9 @@ form {
 input {
     border-radius: 40px;
     padding: 13px 50px 13px 20px;
+    margin-top: -36px;
+    width: 80%;
+    height: 30px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     color: rgb(255, 255, 255);
@@ -106,8 +109,8 @@ label  {
 
 
 p.register {
-    position: relative;
-    margin: 20px 0px 0px -8px;
+    position: absolute;
+    margin: 140px 0px 0px 15px;
     color: rgb(255, 255, 255);
     font-size: 15px;
     display: block;
@@ -128,6 +131,17 @@ a.register:hover {
     text-decoration: underline;
 }
 
+div.caixa1 {
+    position: relative;
+    left: -488px;
+    margin: 0px auto 104px auto;
+    top: -100px;
+}
+
+a.register:hover {
+    text-decoration: underline;
+}
+
 @media screen and (min-width: 560px) {
     input#ilogin {
         margin: 20px auto 0px auto;
@@ -140,7 +154,8 @@ a.register:hover {
 }
 
 input#ilogin  {
-    position: relative;
+    position: absolute;
+    margin: 50px 0px 0px 45px;
     display: block;
     padding: 30px;
     cursor: pointer;
