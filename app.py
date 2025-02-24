@@ -9,7 +9,7 @@ import os  # Importe o módulo os para acessar as variáveis de ambiente
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = 'gabriel2008'  # Chave secreta para sessões e CSRF
+app.secret_key = '7e5b111ff822e2224dd3a184c7915ddf'  # Chave secreta para sessões e CSRF
 csrf = CSRFProtect(app)  # Proteção CSRFfrom flask import Flask, render_template, request, redirect, url_for, session, flash
 
 # Configurações do banco de dados MySQL
