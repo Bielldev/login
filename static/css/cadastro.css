@@ -19,8 +19,10 @@ body, html {
 
 @media screen and (max-width: 560px) {
     form {
-        width: 70vw;
+        width: 80vw;
         height: 70vh;
+        top: 30vh;
+        left: 50%;
     }
 }
 
@@ -28,6 +30,8 @@ body, html {
     form {
         width: 500px;
         height: 500px;
+        top: 37vh;
+        left: 50%;
     }
 }
 
@@ -35,8 +39,6 @@ body, html {
 form {
     text-align: right;
     position: relative;
-    top: 42vh;
-    left: 50%;
     transform: translate(-50%, -50%);
     border: 2px solid rgba(255, 255, 255, 0);
     backdrop-filter: blur(30px);
@@ -45,12 +47,14 @@ form {
 @media screen and (max-width: 560px) {
     input {
         width: 60%;
+        margin: 30px auto 0px auto;
     }
 }
 
 @media screen and (min-width: 560px) {
     input {
-        width: 320px;
+        width: 80%;
+        margin: 30px auto 0px auto;
     }
 }
 
@@ -58,11 +62,7 @@ input {
     position: relative;
     border-radius: 40px;
     padding: 13px 50px 13px 20px;
-    margin-top: 20px;
-    margin-left: 15px;
     display: block;
-    width: 80%;
-    height: 30px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     color: rgb(255, 255, 255);
@@ -163,6 +163,7 @@ a.login {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
     position: relative;
     width: 45px;
     text-decoration: none;
