@@ -5,9 +5,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv  # Importe a função load_dotenv
 import os  # Importe o módulo os para acessar as variáveis de ambiente
 
-# Carregar variáveis de ambiente do arquivo .env
-load_dotenv()
-
 app = Flask(__name__)
 app.secret_key = '7e5b111ff822e2224dd3a184c7915ddf'  # Chave secreta para sessões e CSRF
 csrf = CSRFProtect(app)  # Proteção CSRFfrom flask import Flask, render_template, request, redirect, url_for, session, flash
