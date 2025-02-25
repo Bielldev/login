@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -6,15 +7,177 @@
     padding: 0px;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body, html {
     height: 100vh;
-    background: url(imagens/background1920.jpg) no-repeat top center fixed;
+    background: url(imagens/background1920.jpg) no-repeat bottom center fixed;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
 }
 
-header {
-    height: 100px;
+@media screen and (max-width: 560px) {
+    form {
+        width: 80vw;
+        height: 60vh;
+        top: 37vh;
+        left: 50%;
+    }
+}
+
+@media screen and (min-width: 560px) {
+    form {
+        width: 500px;
+        height: 500px;
+        top: 37vh;
+        left: 50%;
+    }
+}
+
+
+form {
+    text-align: right;
+    position: relative;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(255, 255, 255, 0);
+    backdrop-filter: blur(30px);
+}
+
+@media screen and (max-width: 560px) {
+    input {
+        width: 40vw;
+        margin: -152px 0px 0px 500px;
+    }
+}
+
+@media screen and (min-width: 560px) {
+    input#iuser, #ipass {
+        width: 120%;
+        margin: -152px 0px 0px 474px
+    }
+}
+
+input {
+    position: relative;
+    border-radius: 40px;
+    padding: 13px 50px 13px 20px;
+    display: block;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: rgb(255, 255, 255);
+}
+
+input#icadastro {
+    padding: 30px;
+    line-height: 0px;
+    margin: 20px auto 20px auto;
+    cursor: pointer;
+}
+
+input#icadastro:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: rgb(255, 255, 255);
+}
+
+form > h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    top: 0%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4vh;
+    color: deepskyblue
+}
+
+i{
+    position: absolute;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    margin: -44px 0px 0px 530px;
+}
+
+label  {
+    position: relative;
+    color: rgb(255, 255, 255);
+    margin: 165px 0px 0px 71px;
+    font-size: 14px;
+    display: block;
+    width: 110px;
+}
+
+@media screen and (min-width: 568px) {
+    p.register {
+        margin: 30px 0px 0px 15px;
+    }
+}
+@media screen and (max-width: 568px) {
+    p.register {
+        margin: 30px 0px 0px 10px;
+    }
+}
+p.register {
+    position: absolute;
+    
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    display: block;
+    width: 271px;
+    text-align: left;
+}
+
+a.register {
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    width: 75px;
+}
+
+div.caixa1 {
+    position: relative;
+    left: -538px;
+    margin: 0px auto 80px auto;
+    width: 50%;
+    
+}
+div.caixa2 {
+    position: relative;
+    left: -538px;
+    margin: 0px auto 80px auto;
+    width: 50%;
+}
+
+#ilogin  {
+    position: relative;
+    margin: 0px auto 0px auto;
+    display: block;
+    padding: 25px;
+    cursor: pointer;
+    line-height: 5px;
+}
+
+#ilogin:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: rgb(255, 255, 255);
+}
+
+a.login:hover {
+    text-decoration: underline;
+}
+
+a.login {
+    color: deepskyblue;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    position: relative;
+    width: 45px;
+    text-decoration: none;
 }
 
 nav#menu {
@@ -28,7 +191,7 @@ nav#menu {
 
 nav#menu ul {
     margin-right: 0px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 nav#menu a {
@@ -56,185 +219,3 @@ nav#menu li {
     list-style-type: none;
 }
 
-nav#menu ul span.peq a {
-    width: 50px;
-}
-
-@media screen and (max-width: 560px) {
-    form {
-        margin: 0px;
-        padding: 0px;
-        width: 80vw;
-        height: 80vh;
-        top: 38vh;
-    }
-}
-
-@media screen and (min-width: 560px) {
-    form {
-        margin: 0px;
-        padding: 0px;
-        width: 500px;
-        height: 70vh;
-        top: 35vh;
-    }
-}
-
-
-form {
-    text-align: right;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid rgba(255, 255, 255, 0);
-    backdrop-filter: blur(30px);
-}
-
-@media screen and (max-width: 560px) {
-    input {
-        position: relative;
-        width: 65%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 10px;
-        display: block;
-        height: 30px; 
-    }
-}
-
-@media screen and (min-width: 560px) {
-    input {
-        position: relative;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        height: 30px;
-    }
-}
-
-input {
-    border-radius: 40px;
-    padding: 13px 50px 13px 20px;
-    height: 30px;
-    margin-top: -120px;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    color: rgb(255, 255, 255);
-}
-
-
-input::placeholder {
-    color: #ffffff; 
-    opacity: 1;
-    font-family: 'Poppins'; 
-}
-
-form > h1 {
-    color: deepskyblue;
-    text-align: center;
-    top: 0%;
-    font-family: 'Poppins', sans-serif;
-    font-size: 5vh;
-}
-
-@media screen and (max-width: 560px) {
-    i {
-        position: absolute;
-        font-size: 20px;
-        padding: 10px;
-        color: white;
-        margin: -50px 0px 0px -90px;
-        display: block;
-    }
-    
-}
-@media screen and (min-width: 560px) {
-    i {
-        position: absolute;
-        font-size: 20px;
-        padding: 10px;
-        color: white;
-        margin: -50px 0px 0px -80px;
-        display: block;
-
-    }
-    
-}
-
-label  {
-    position: relative;
-    color: rgb(255, 255, 255);
-    margin: 165px 0px 0px 71px;
-    font-size: 14px;
-    display: block;
-    width: 110px;
-}
-
-
-p.register {
-    position: relative;
-    margin: 40px auto 0px auto;
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    display: block;
-    width: 245px;
-}
-
-a.register {
-    position: relative;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    width: 75px;
-}
-
-a.register:hover {
-    text-decoration: underline;
-}
-
-
-a.register:hover {
-    text-decoration: underline;
-}
-
-@media screen and (min-width: 560px) {
-    input#ilogin {
-        margin: 20px auto 0px auto;
-    }
-}
-@media screen and (max-width: 560px) {
-    input#ilogin {
-        margin: 50px auto 0px auto;
-    }
-}
-
-input#ilogin  {
-    position: relative;
-    display: block;
-    padding: 30px;
-    cursor: pointer;
-    line-height: 0px;
-
-}
-
-
-input#ilogin:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, .2);
-    color: rgb(255, 255, 255);
-}
-
-div#erro {
-    position: relative;
-    margin: 0px 0px 0px 0px;
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 0, 0, 0.5);
-    color: white;
-    font-size: 19px;
-    font-weight: bold;
-}
