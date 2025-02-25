@@ -20,7 +20,7 @@ body, html {
 
 @media screen and (max-width: 560px) {
     form {
-        width: 80vw;
+        width: 87vw;
         height: 60vh;
         top: 37vh;
         left: 50%;
@@ -96,7 +96,7 @@ i{
     font-size: 20px;
     padding: 10px;
     color: white;
-    margin: -44px 0px 0px 530px;
+    margin: -44px 0px 0px 515px;
 }
 
 label  {
@@ -219,3 +219,23 @@ nav#menu li {
     list-style-type: none;
 }
 
+@media screen and (min-width: 560px) {
+    div#erro {
+        width: 298px;
+        margin: -56px 0px 20px 85px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    div#erro {
+        width: 70vw;
+        margin: -64px 0px 20px 0px;
+    }
+}
+
+div#erro {
+    position: relative;
+    display: block;
+    color: red;
+    text-shadow: 1px 1px #000000b5;
+}
