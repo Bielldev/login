@@ -3,3 +3,4 @@ flask-wtf==1.1.1
 Werkzeug==2.3.7  
 mysql-connector-python
 python-dotenv==1.0.0
+pymysql
