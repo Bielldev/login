@@ -27,7 +27,8 @@ def conectar_banco_de_dados():
             host=MYSQL_HOST,
             user=MYSQL_USER,
             password=MYSQL_PASSWORD,
-            database=MYSQL_DATABASE
+            database=MYSQL_DATABASE,
+            port=MYSQL_PORT
         )
         return conexao
     except mysql.connector.Error as erro:
