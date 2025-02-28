@@ -154,5 +154,5 @@ def registrar():
     return render_template('registrar.html')
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 3306))
-    app.run(host="0.0.0.0", port=3306, debug=False)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
