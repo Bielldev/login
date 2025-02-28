@@ -19,13 +19,15 @@ MYSQL_DATABASE = os.getenv('MYSQL_DATABASE')
 MYSQL_PORT = int(os.getenv('MYSQL_PORT', 3306))
 MYSQL_NAME = os.getenv('MYSQL_NAME')
 app.secret_key = os.getenv('SECRET_KEY')
-mysql_url = os.getenv('MYSQL_URL')
 print(f"SECRET_KEY: {os.getenv('SECRET_KEY')}")
-url = urlparse(mysql_url)
+
 
 # Função para conectar ao banco de dados
 def conectar_banco_de_dados():
     try:
+        mysql_url = os.getenv('MYSQL_URL')
+        url = urlparse(mysql_url)
+
         conexao = mysql.connector.connect(
             host=url.hostname,
             user=url.username,
