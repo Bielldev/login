@@ -4,6 +4,7 @@ import mysql.connector
 from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv  # Importe a função load_dotenv
 import os  # Importe o módulo os para acessar as variáveis de ambiente
+from urllib.parse import urlparse
 
 load_dotenv()
 
@@ -18,17 +19,19 @@ MYSQL_DATABASE = os.getenv('MYSQL_DATABASE')
 MYSQL_PORT = int(os.getenv('MYSQL_PORT', 3306))
 MYSQL_NAME = os.getenv('MYSQL_NAME')
 app.secret_key = os.getenv('SECRET_KEY')
+mysql_url = os.getenv('MYSQL_URL')
 print(f"SECRET_KEY: {os.getenv('SECRET_KEY')}")
+url = urlparse(mysql_url)
 
 # Função para conectar ao banco de dados
 def conectar_banco_de_dados():
     try:
         conexao = mysql.connector.connect(
-            host=MYSQL_HOST,
-            user=MYSQL_USER,
-            password=MYSQL_PASSWORD,
-            database=MYSQL_DATABASE,
-            port=MYSQL_PORT
+            host=url.hostname,
+            user=url.username,
+            password=url.password,
+            database=url.path[1:],  # Remove a barra inicial do caminho
+            port=url.port
         )
         return conexao
     except mysql.connector.Error as erro:
@@ -152,4 +155,4 @@ def registrar():
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 3306))
-    app.run(host="0.0.0.0", port=3306, debug=False)
+    app.run(host="0.0.0.0", port=3306, debug=True)
