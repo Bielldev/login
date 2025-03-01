@@ -6,20 +6,13 @@ from dotenv import load_dotenv  # Importe a função load_dotenv
 import os  # Importe o módulo os para acessar as variáveis de ambiente
 from urllib.parse import urlparse
 
-load_dotenv()
+load_dotenv('/etc/secrets/.env')
 
 app = Flask(__name__)
 csrf = CSRFProtect(app)  # Proteção CSRFfrom flask import Flask, render_template, request, redirect, url_for, session, flash
 
-# Configurações do banco de dados MySQL
-MYSQL_HOST = os.getenv('MYSQL_HOST')
-MYSQL_USER = os.getenv('MYSQL_USER')
-MYSQL_PASSWORD = os.getenv('MYSQL_PASSWORD')
-MYSQL_DATABASE = os.getenv('MYSQL_DATABASE')
-MYSQL_PORT = int(os.getenv('MYSQL_PORT', 3306))
-MYSQL_NAME = os.getenv('MYSQL_NAME')
+
 app.secret_key = os.getenv('SECRET_KEY')
-print(f"SECRET_KEY: {os.getenv('SECRET_KEY')}")
 
 
 # Função para conectar ao banco de dados
@@ -29,11 +22,11 @@ def conectar_banco_de_dados():
         url = urlparse(mysql_url)
 
         conexao = mysql.connector.connect(
-            host=url.hostname,
-            user=url.username,
-            password=url.password,
-            database=url.path[1:],  # Remove a barra inicial do caminho
-            port=url.port
+            host= url.hostname,
+            user= url.username,
+            password= url.password,
+            database= url.path[1:],  # Remove a barra inicial do caminho
+            port= url.port
         )
         return conexao
     except mysql.connector.Error as erro:
